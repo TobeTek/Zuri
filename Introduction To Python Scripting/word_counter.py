@@ -13,4 +13,3 @@ no_words = len(list_of_words)
 # Print out the number of words
 print(no_words)
 
-help("keywords")
