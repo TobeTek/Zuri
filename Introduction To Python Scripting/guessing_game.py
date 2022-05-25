@@ -24,4 +24,4 @@ if user_guess > our_fav_number:
     print("Your guess is too high. Try a little lower")
 
 
-# try and except
+# try and except 
