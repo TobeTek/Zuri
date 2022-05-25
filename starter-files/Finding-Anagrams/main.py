@@ -1,10 +1,10 @@
-# Check if a word is an anagrams 
+# Check if a word is a Palindrome
 # Example:
-# find_anagrams("hello") --> False
-# find_anagrams("racecar") --> True
+# find_palindrome("hello") --> False
+# find_palindrome("racecar") --> True
 
 
-def find_anagrams(word):
+def find_palindrome(word):
     # [assignment] Add your code here
 
     return True
