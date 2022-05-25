@@ -4,7 +4,7 @@
 # find_anagrams("below", "elbow") --> True
 
 
-def find_palindrome(word, anagram):
+def find_anagram(word, anagram):
     # [assignment] Add your code here
 
     return True
