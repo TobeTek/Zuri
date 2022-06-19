@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- BOOTSTRAP FORM -->
+
+<div class="container d-flex justify-content-center mt-5" style="width: 25%;">
+    <div class="col mt-5">
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table">
+                {{form.as_table}}
+            </table>
+            <div class="container d-flex justify-content-center" style="width: 10%;">
+                <input type="submit" class="btn btn-primary btn-lg" value="Submit" style="margin-right: 30px; margin-top: 30px;">
+                <input type="submit" class="btn btn-danger btn-lg" style="margin-top: 30px;" onclick="window.location='{% url 'blog:all' %}'; return false;" value="Cancel">
+            </div>    
+        </form> 
+
+    </div>
+</div>
+
+<!-- END BOOTSTRAP FORM -->
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5" style="width: 70%;">
+    <div class="col">
+        <h1 class="text-center">{{object.title}}</h1>
+        <hr>
+        <div class="d-flex justify-content-center">
+            <section>
+                <p>{{object.body|linebreaks}}</p>
+            </section>
+        </div>
+        <div>Author: <strong>{{object.author}}<strong><br>
+            <small>Published: {{object.publish|date:"D, d M, y"}}</small>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a href="{% url 'blog:all' %}" class="d-block btn btn-primary btn-lg my-5">BACK</a>
+        </div>
+    </div>
+</div>
+
+{% endblock  %}
