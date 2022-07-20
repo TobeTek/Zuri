@@ -12,7 +12,7 @@ user_guess = int(user_guess)
 
 # print(type(user_guess))
 
-# < == > >= <= 
+# < == > >= <=
 
 if user_guess == our_fav_number:
     print("Success, you guessed the number! Our favourite is: " + str(our_fav_number))

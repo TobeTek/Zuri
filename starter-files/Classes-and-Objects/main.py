@@ -4,8 +4,7 @@ class Student:
         pass
 
 
-
-Bob = Student(name="Bob", age=26, tracks=["FE","BE"],score=20.90)
+Bob = Student(name="Bob", age=26, tracks=["FE", "BE"], score=20.90)
 
 # Expected methods
 Bob.change_name("Peter")

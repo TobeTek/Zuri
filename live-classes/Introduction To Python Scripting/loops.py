@@ -1,6 +1,6 @@
 # While Loops
 
-is_nighttime = True 
+is_nighttime = True
 
 hour_of_the_day = 0
 
@@ -11,11 +11,10 @@ while is_nighttime:
     if hour_of_the_day == 10:
         print("Waking up!")
         break
-    
+
     # Keep sleeping
     hour_of_the_day = hour_of_the_day + 1
-    
-    
+
 
 # Wake up and start your day
 print("We've woken up!")

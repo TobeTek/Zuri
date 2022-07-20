@@ -1,5 +1,5 @@
 def read_file(filename):
-    open_file = open("./story.txt","r")
+    open_file = open("./story.txt", "r")
     read_file = open_file.read()
     print(read_file)
 
@@ -12,33 +12,34 @@ def read_file(filename):
 
 def read_file_content(filename):
     # [assignment] Add your code here
-     with open(filename) as f:
-           # Removed print line, and make use of return
-           return f.read()
+    with open(filename) as f:
+        # Removed print line, and make use of return
+        return f.read()
+
 
 def count_words(read_file_content):
     text = read_file_content("Reading-Text-Files\story.txt")
-    #assignment] Add your code here
+    # assignment] Add your code here
     counter = dict()
-    
-    # Find a way to remove punctuation from `text`    
+
+    # Find a way to remove punctuation from `text`
 
     list_of_lines = text.split("\n")
 
     for line in list_of_lines:
-       
-       line = line.strip()
-       line = line.lower()
-       words = line.split(" ")       
-       for word in words:
-        # Check if the word is already in dictionary
-        if word in counter:
-            # Increment count of word by 1
-            counter[word] = counter[word] + 1
-        else:
-            # Add the word to dictionary with count 1
-             counter[word] = 1
-        return counter #"as": 10, "would": 20}
+
+        line = line.strip()
+        line = line.lower()
+        words = line.split(" ")
+        for word in words:
+            # Check if the word is already in dictionary
+            if word in counter:
+                # Increment count of word by 1
+                counter[word] = counter[word] + 1
+            else:
+                # Add the word to dictionary with count 1
+                counter[word] = 1
+            return counter  # "as": 10, "would": 20}
+
 
 print(count_words(read_file_content))
-    

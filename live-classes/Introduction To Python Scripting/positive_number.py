@@ -8,7 +8,7 @@ try:
 
     if user_no >= 0:
         print("True")
-    
+
     else:
         print("False")
 

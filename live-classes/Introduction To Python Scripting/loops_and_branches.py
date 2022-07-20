@@ -17,7 +17,7 @@ elif 100 < 200:
     print("100 is less than 200")
 
 # else
-our_flag = 500 == 1000 # our_flag = False
+our_flag = 500 == 1000  # our_flag = False
 
 if our_flag:
     print("500 is equal to 1000")
@@ -30,4 +30,3 @@ elif True:
 
 else:
     print("Running the else block")
-

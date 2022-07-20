@@ -1,5 +1,6 @@
 # Python 3.10.1
 
+
 class Student:
     # [assignment] Skeleton class. Add your code here
     def __init__(self, name, age, tracks, score):
@@ -7,7 +8,7 @@ class Student:
         self.age = age
         self.tracks = tracks
         self.score = score
-    
+
     def change_name(self, new_name):
         self.name = new_name
         print(f"Changed name to {new_name}")
@@ -18,8 +19,8 @@ class Student:
             new_age = int(new_age)
         except:
             print("Failed to change age. Invalid data type")
-            raise Exception 
-        # isinstance ... 
+            raise Exception
+        # isinstance ...
 
         self.age = new_age
         print(f"Changed age to {new_age}")
@@ -31,7 +32,8 @@ class Student:
     def get_score(self):
         return self.score
 
-Bob = Student(name="Bob", age=26, tracks=["FE","BE"],score=20.90)
+
+Bob = Student(name="Bob", age=26, tracks=["FE", "BE"], score=20.90)
 
 
 # Expected methods

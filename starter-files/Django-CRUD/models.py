@@ -3,15 +3,13 @@ from django.contrib.auth import get_user_model
 from django.utils import timezone
 from django.urls import reverse
 from django.template.defaultfilters import slugify
+
 # Create your models here.
 
 
 class Post(models.Model):
 
-    STATUS_CHOICES = (
-        ("draft", "Draft"),
-        ("published", "Published")
-    )
+    STATUS_CHOICES = (("draft", "Draft"), ("published", "Published"))
 
     # DB Fields
     title = models.CharField(max_length=250)
@@ -25,9 +23,7 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
-    status = models.CharField(
-        max_length=10, choices=STATUS_CHOICES, default="draft"
-    )
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default="draft")
 
     class Meta:
         ordering = ("-publish",)
@@ -35,11 +31,10 @@ class Post(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super().save(*args, **kwargs)
-        pass 
+        pass
 
     def __str__(self):
         return self.title
-    
+
     def get_absolute_url(self):
         return reverse("blog:post_detail", kwargs={"slug": self.slug})
-    

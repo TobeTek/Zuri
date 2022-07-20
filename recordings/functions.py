@@ -6,19 +6,17 @@ def print_name(name, nationality, age=18):
 
 
 def sum(*args):
-    # Return the sum to our program 
+    # Return the sum to our program
     print(args)
     sum = 0
     for no in args:
         sum += no
-    
+
     return sum
 
-b = sum(5, 6, 10 ,14)
+
+b = sum(5, 6, 10, 14)
 print(b)
 
-b = sum(2,3)
+b = sum(2, 3)
 print(b)
-
-
-
