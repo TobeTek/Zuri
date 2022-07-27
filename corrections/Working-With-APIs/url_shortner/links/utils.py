@@ -12,4 +12,4 @@ def generate_random_id() -> str:
     # Get the first 8 characters of the id
     id = id[:8]
 
-    return 
+    return id
