@@ -1,7 +1,9 @@
 from django.db import models
-from . import utils
-
 from django.contrib.auth import get_user_model
+
+from . import utils
+from . import managers
+
 # Create your models here
 
 
@@ -17,6 +19,9 @@ class Link(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=True)
 
+    public = managers.ActiveLinkManager()
+    objects = models.Manager()
+    
     def __str__(self):
         return f"{self.identifier}"
 
